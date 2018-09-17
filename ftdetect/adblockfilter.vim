@@ -9,7 +9,7 @@
 au BufNewFile,BufRead *.txt call s:detect_adblock_filter()
 function! s:detect_adblock_filter()
     if getline(1) =~? '\[Adblock.*\]'
-        setfiletype adblockfilter
+        setlocal filetype=adblockfilter
     endif
 endfunction
 
